@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BurgerHouse</title>
+    <link rel="icon" type="image/png" href="./IMG/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body onload="init()">
+
+    <header>
+        <div class="header-content">
+
+            <div class="app-name">
+                Bestell<br>APP
+            </div>
+
+            <div class="menu-icon">
+                ☰
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="restaurant">
+
+            <div class="hero">
+
+                <img
+                    class="hero-image"
+                    src="./IMG/hero.png"
+                    alt="BurgerHouse Restaurant"
+                >
+
+                <img
+                    class="restaurant-logo"
+                    src="./IMG/logo.png"
+                    alt="BurgerHouse Logo"
+                >
+
+            </div>
+
+
+            <div class="restaurant-info">
+
+                <div class="restaurant-title">
+
+                    <h1>
+                        <span>Burger</span>House
+                    </h1>
+
+                    <div class="rating">
+                        ★ 4,1 <small>(317)</small>
+                    </div>
+
+                </div>
+
+                <p>
+                    The best of Burgers, Pizza, and Greens,
+                    all in one great place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="category-title">
+
+            <span class="burger-symbol">
+                🍔
+            </span>
+
+            <h2>
+                Burger & Sandwiches
+            </h2>
+
+        </section>
+
+
+        <section class="content-wrapper">
+
+            <div class="menu">
+
+                <div id="dishContent"></div>
+
+            </div>
+
+
+            <aside class="basket">
+
+                <h2>
+                    Your Basket
+                </h2>
+
+                <div id="basketContent">
+
+                    <p class="empty-basket">
+                        Your basket is empty.
+                    </p>
+
+                </div>
+
+
+                <div class="basket-summary">
+
+                    <div>
+                        <span>Subtotal</span>
+                        <span id="subtotal">0,00 €</span>
+                    </div>
+
+                    <div>
+                        <span>Delivery fee</span>
+                        <span>4,99 €</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="total">
+                        <span>Total</span>
+                        <span id="totalPrice">0,00 €</span>
+                    </div>
+
+                </div>
+
+
+                <button class="buy-button">
+                    Buy now
+                </button>
+
+                <!--
+                    TODO:
+                    Buy-now-Funktion
+                    Confirmation Dialog
+                -->
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 BurgerHouse
+        </p>
+
+    </footer>
+
+
+    <script src="data.js"></script>
+    <script src="template.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #363534;
+}
+
+
+header {
+    height: 95px;
+    background-color: #ef6c18;
+}
+
+
+.header-content {
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+
+.app-name {
+    font-weight: bold;
+    line-height: 13px;
+}
+
+
+.menu-icon {
+    font-size: 34px;
+}
+
+
+main {
+    max-width: 1440px;
+    margin: auto;
+    background-color: white;
+}
+
+
+.hero {
+    position: relative;
+    max-width: 1080px;
+    margin: auto;
+}
+
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+
+.restaurant-logo {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    left: 50%;
+    bottom: -75px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+}
+
+
+.restaurant-info {
+    min-height: 200px;
+
+    padding-top: 100px;
+
+    text-align: center;
+}
+
+
+.restaurant-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.restaurant-title h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+
+.restaurant-title h1 span {
+    color: #ef6c18;
+}
+
+
+.rating {
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    background-color: #fdeadc;
+
+    font-size: 14px;
+}
+
+
+.restaurant-info p {
+    font-weight: bold;
+}
+
+
+.category-title {
+    height: 60px;
+
+    padding-left: calc((100% - 850px) / 2);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #ef6c18;
+    color: white;
+}
+
+
+.category-title h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+
+.burger-symbol {
+    font-size: 45px;
+}
+
+
+.content-wrapper {
+    max-width: 1080px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 330px;
+
+    gap: 40px;
+}
+
+
+.menu {
+    padding: 20px 0;
+}
+
+
+.dish {
+    min-height: 130px;
+
+    margin-bottom: 15px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background-color: #fdeadc;
+}
+
+
+.dish-image {
+    width: 190px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+.dish-info {
+    flex: 1;
+
+    padding: 0 15px;
+}
+
+
+.dish-info h3 {
+    margin: 0 0 5px;
+}
+
+
+.dish-info p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+.dish-right {
+    min-width: 115px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.add-button {
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+
+.basket {
+    min-height: 520px;
+
+    padding: 35px 25px;
+
+    background-color: #363534;
+    color: white;
+}
+
+
+.basket h2 {
+    text-align: center;
+}
+
+
+#basketContent {
+    max-height: 300px;
+
+    overflow-y: auto;
+}
+
+
+.empty-basket {
+    text-align: center;
+
+    color: #cccccc;
+}
+
+
+.basket-item {
+    margin-bottom: 10px;
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background-color: #fdeadc;
+    color: #363534;
+}
+
+
+.basket-item-bottom {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.basket-summary {
+    margin-top: 25px;
+}
+
+
+.basket-summary > div {
+    margin: 7px 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.total {
+    font-weight: bold;
+}
+
+
+.buy-button {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #ef6c18;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #ef6c18;
+    color: white;
+}
+
+
+/*
+    Responsive Design ist noch nicht fertig.
+*/
+
+
+@media (max-width: 800px) {
+
+    .content-wrapper {
+        display: block;
+        padding: 15px;
+    }
+
+
+    .basket {
+        display: none;
+    }
+
+}
