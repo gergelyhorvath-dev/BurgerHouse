@@ -345,3 +345,62 @@ footer {
     }
 
 }
+.basket-item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+.basket-item-bottom button {
+    border: none;
+    border-radius: 50%;
+
+    min-width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+
+.order-dialog {
+    width: 415px;
+
+    padding: 32px 40px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #363534;
+    color: white;
+
+    text-align: center;
+}
+
+
+.order-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.delivery-image {
+    width: 80px;
+}
+
+
+.close-dialog {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}

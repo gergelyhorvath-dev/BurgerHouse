@@ -40,8 +40,7 @@ function getDishTemplate(dish, index) {
     `;
 }
 
-
-function getBasketTemplate(item) {
+function getBasketTemplate(item, index) {
     return `
         <div class="basket-item">
 
@@ -53,13 +52,25 @@ function getBasketTemplate(item) {
 
             <div class="basket-item-bottom">
 
+                <button onclick="decreaseAmount(${index})">
+                    −
+                </button>
+
                 <span>
                     ${item.amount}
                 </span>
 
+                <button onclick="increaseAmount(${index})">
+                    +
+                </button>
+
                 <span>
                     ${formatPrice(item.price * item.amount)}
                 </span>
+
+                <button onclick="removeFromBasket(${index})">
+                    🗑
+                </button>
 
             </div>
 

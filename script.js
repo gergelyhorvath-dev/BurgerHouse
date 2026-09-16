@@ -72,7 +72,7 @@ function renderBasket() {
 
 function renderBasketItems(content) {
     for (let i = 0; i < basket.length; i++) {
-        content.innerHTML += getBasketTemplate(basket[i]);
+        content.innerHTML += getBasketTemplate(basket[i], i);
     }
 }
 
@@ -104,24 +104,31 @@ function formatPrice(price) {
 }
 
 
-/*
 
-NOCH NICHT FERTIG:
+
 
 
 function increaseAmount(index) {
+    basket[index].amount++;
+    renderBasket();
 
 }
-
-
 function decreaseAmount(index) {
+    basket[index].amount--;
 
+    if (basket[index].amount === 0) {
+        basket.splice(index, 1);
+    }
+
+    renderBasket();
 }
-
 
 function removeFromBasket(index) {
-
+    basket.splice(index, 1);
+    renderBasket();
 }
+
+/*
 
 
 function orderFood() {
