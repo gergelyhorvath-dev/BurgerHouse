@@ -2,11 +2,10 @@ function getDishTemplate(dish, index) {
     return `
         <div class="dish">
 
-            <img
-                class="dish-image"
-                src="${dish.image}"
-                alt="${dish.name}"
-            >
+            <picture>
+              <source media="(max-width: 600px)" srcset="${dish.mobileImage}">
+              <img class="dish-image" src="${dish.image}" alt="${dish.name}">
+            </picture>
 
             <div class="dish-info">
 
@@ -39,6 +38,7 @@ function getDishTemplate(dish, index) {
         </div>
     `;
 }
+
 
 function getBasketTemplate(item, index) {
     return `
@@ -75,5 +75,13 @@ function getBasketTemplate(item, index) {
             </div>
 
         </div>
+    `;
+}
+
+function getEmptyBasketTemplate() {
+    return `
+        <p class="empty-basket">
+            Your basket is empty.
+        </p>
     `;
 }

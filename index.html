@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -35,17 +35,9 @@
 
             <div class="hero">
 
-                <img
-                    class="hero-image"
-                    src="./IMG/hero.png"
-                    alt="BurgerHouse Restaurant"
-                >
+                <img class="hero-image" src="./IMG/hero.png" alt="BurgerHouse Restaurant">
 
-                <img
-                    class="restaurant-logo"
-                    src="./IMG/logo.png"
-                    alt="BurgerHouse Logo"
-                >
+                <img class="restaurant-logo" src="./IMG/logo.png" alt="BurgerHouse Logo">
 
             </div>
 
@@ -133,21 +125,67 @@
                 </div>
 
 
-                <button class="buy-button">
+                <button class="buy-button" onclick="orderFood()">
                     Buy now
                 </button>
-
-                <!--
-                    TODO:
-                    Buy-now-Funktion
-                    Confirmation Dialog
-                -->
 
             </aside>
 
         </section>
 
     </main>
+
+    <nav class="mobile-nav">
+        <img src="./IMG/Home.png" alt="Home">
+
+        <img src="./IMG/Profile.png" alt="Profile">
+
+        <img src="./IMG/orders.png" alt="Orders">
+
+        <button class="mobile-nav-basket" onclick="openMobileBasket()">
+            <img src="./IMG/shopping_cart.png" alt="Basket">
+        </button>
+    </nav>
+
+    <dialog id="mobileBasketDialog" class="mobile-basket-dialog">
+
+        <button class="close-dialog" onclick="closeMobileBasket()">
+            ×
+        </button>
+
+        <h2>Your Basket</h2>
+
+        <div id="mobileBasketContent"></div>
+
+        <div class="mobile-basket-total">
+            Total:
+            <span id="mobileTotalPrice">0,00 €</span>
+        </div>
+
+        <button class="buy-button" onclick="orderFood()">
+            Buy now
+        </button>
+
+    </dialog>
+    <dialog id="orderDialog" class="order-dialog">
+
+        <button class="close-dialog" onclick="closeConfirmation()">
+            ×
+        </button>
+
+        <img class="delivery-image" src="./IMG/delivery.png" alt="Delivery">
+
+        <h2>Thank you for your order!</h2>
+
+        <p>
+            Your order has been successfully placed.
+        </p>
+
+        <button class="buy-button" onclick="closeConfirmation()">
+            Close
+        </button>
+
+    </dialog>
 
     <footer>
 
